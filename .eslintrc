@@ -1,0 +1,53 @@
+{
+  "parser": "babel-eslint",
+  "extends": "eslint:recommended",
+  "env": {
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "max-len": "off",
+    "newline-per-chained-call": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "no-mixed-operators": "off",
+    "no-use-before-define": "off",
+    "prefer-template": "error",
+    "class-methods-use-this": "warn",
+    "require-yield": "off",
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ]
+  }
+}

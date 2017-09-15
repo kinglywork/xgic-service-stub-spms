@@ -1,0 +1,44 @@
+{
+  "name": "xgic-query",
+  "version": "0.0.1",
+  "private": true,
+  "description": "西安西谷微电子数据检索服务",
+  "author": "kloudtron",
+  "repository": {
+    "type": "git",
+    "url": "git@git.oschina.net:kloudtron-xgic/xgic-query.git"
+  },
+  "engines": {
+    "node": ">=6.10",
+    "npm": ">=3.10"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint:staged": "lint-staged",
+    "lint:eslint": "eslint --ignore-path .gitignore --color",
+    "lint": "npm run lint:eslint -- .",
+    "test": "npm run lint && mocha",
+    "testWatch": "mocha -w"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "body-parser": "^1.17.2",
+    "bodybuilder": "^2.2.1",
+    "express": "^4.15.4",
+    "lodash": "^4.17.4",
+    "node-uuid": "^1.4.8",
+    "request": "^2.81.0",
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.4.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "chai": "^4.1.1",
+    "eslint": "^4.4.1",
+    "mocha": "^3.5.0"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.js": "lint:eslint"
+  }
+}
